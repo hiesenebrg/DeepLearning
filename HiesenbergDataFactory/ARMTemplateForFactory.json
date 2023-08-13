@@ -1088,12 +1088,14 @@
 						"     skipDuplicateMapOutputs: true) ~> select1",
 						"select1 sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
+						"     partitionFileNames:['processedCovide19CaseDeath.csv'],",
 						"     truncate: true,",
 						"     umask: 0777,",
 						"     preCommands: [],",
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
-						"     skipDuplicateMapOutputs: true) ~> CaseandDeathSink"
+						"     skipDuplicateMapOutputs: true,",
+						"     partitionBy('hash', 1)) ~> CaseandDeathSink"
 					]
 				}
 			},
@@ -1101,6 +1103,54 @@
 				"[concat(variables('factoryId'), '/datasets/DelimitedText8')]",
 				"[concat(variables('factoryId'), '/datasets/DelimitedText9')]",
 				"[concat(variables('factoryId'), '/datasets/Processesd_Case_Death')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dataflow_case_death')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Covid19TfCaseDeath",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "Covid19TfCaseDeath",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"Covid19TfCaseDeath": {},
+									"lookupSource": {},
+									"CaseandDeathSink": {}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/Covid19TfCaseDeath')]"
 			]
 		}
 	]
