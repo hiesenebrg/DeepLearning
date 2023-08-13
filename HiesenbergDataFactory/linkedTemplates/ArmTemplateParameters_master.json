@@ -8,10 +8,31 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage10_accountKey": {
+			"value": ""
+		},
 		"AzureDataLakeStorage2_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage6_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage7_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage8_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage9_accountKey": {
 			"value": ""
 		},
 		"countryLookup_accountKey": {
@@ -29,10 +50,31 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
 		},
+		"AzureDataLakeStorage10_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
 		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage6_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage7_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage8_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage9_properties_typeProperties_url": {
 			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
 		},
 		"HttpServer1_properties_typeProperties_url": {
