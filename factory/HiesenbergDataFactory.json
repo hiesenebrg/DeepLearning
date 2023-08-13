@@ -1,0 +1,9 @@
+{
+	"name": "HiesenbergDataFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "43e71323-895c-46a8-af70-f95701b15c7a",
+		"tenantId": "339df4a7-208d-4f6c-af95-ea0005379428"
+	}
+}
