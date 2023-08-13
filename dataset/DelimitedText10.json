@@ -1,8 +1,8 @@
 {
-	"name": "ds_country_lookup",
+	"name": "DelimitedText10",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage2",
+			"referenceName": "AzureDataLakeStorage4",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "country_lookup.csv",
-				"fileSystem": "lookup"
+				"fileName": "hospital_admissions.csv",
+				"fileSystem": "covid19"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -24,19 +24,27 @@
 				"type": "String"
 			},
 			{
-				"name": "country_code_3_digit",
+				"name": "indicator",
 				"type": "String"
 			},
 			{
-				"name": "country_code_2_digit",
+				"name": "date",
 				"type": "String"
 			},
 			{
-				"name": "continent",
+				"name": "year_week",
 				"type": "String"
 			},
 			{
-				"name": "population",
+				"name": "value",
+				"type": "String"
+			},
+			{
+				"name": "source",
+				"type": "String"
+			},
+			{
+				"name": "url",
 				"type": "String"
 			}
 		]

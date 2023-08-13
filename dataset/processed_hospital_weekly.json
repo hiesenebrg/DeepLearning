@@ -1,8 +1,8 @@
 {
-	"name": "ds_country_lookup",
+	"name": "processed_hospital_weekly",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage2",
+			"referenceName": "AzureDataLakeStorage7",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "country_lookup.csv",
-				"fileSystem": "lookup"
+				"folderPath": "weekly_admission",
+				"fileSystem": "processeddata"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -24,19 +24,31 @@
 				"type": "String"
 			},
 			{
-				"name": "country_code_3_digit",
-				"type": "String"
-			},
-			{
 				"name": "country_code_2_digit",
 				"type": "String"
 			},
 			{
-				"name": "continent",
+				"name": "country_code_3_digit",
 				"type": "String"
 			},
 			{
 				"name": "population",
+				"type": "String"
+			},
+			{
+				"name": "cases_count",
+				"type": "String"
+			},
+			{
+				"name": "deaths_count",
+				"type": "String"
+			},
+			{
+				"name": "reported_date",
+				"type": "String"
+			},
+			{
+				"name": "source",
 				"type": "String"
 			}
 		]
