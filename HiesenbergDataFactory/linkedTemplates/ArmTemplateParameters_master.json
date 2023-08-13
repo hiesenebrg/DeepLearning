@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "HiesenbergDataFactory"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"countryLookup_accountKey": {
+			"value": ""
+		},
+		"coviddeath_accountKey": {
+			"value": ""
+		},
+		"hospitalsink_accountKey": {
+			"value": ""
+		},
+		"testingsink_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://opendata.ecdc.europa.eu/covid19/testing/csv"
+		},
+		"HttpServerforhospital_properties_typeProperties_url": {
+			"value": "https://opendata.ecdc.europa.eu/covid19/hospitalicuadmissionrates/csv"
+		},
+		"countryLookup_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"coviddeath_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"hospitalsink_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"httpforcoviddeath_properties_typeProperties_url": {
+			"value": "https://opendata.ecdc.europa.eu/covid19/nationalcasedeath/csv"
+		},
+		"testingsink_properties_typeProperties_url": {
+			"value": "https://hiesenberghtorage.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
