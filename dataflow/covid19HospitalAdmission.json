@@ -32,14 +32,14 @@
 						"referenceName": "weekly_sink",
 						"type": "DatasetReference"
 					},
-					"name": "WeeklySink"
+					"name": "WeeklySinkSingle"
 				},
 				{
 					"dataset": {
 						"referenceName": "DelimitedText12",
 						"type": "DatasetReference"
 					},
-					"name": "sinkDaily"
+					"name": "sinkDailySingle"
 				}
 			],
 			"transformations": [
@@ -218,7 +218,7 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> WeeklySink",
+				"     partitionBy('hash', 1)) ~> WeeklySinkSingle",
 				"selectDaily sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     partitionFileNames:[''],",
@@ -226,7 +226,8 @@
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sinkDaily"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sinkDailySingle"
 			]
 		}
 	}
